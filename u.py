@@ -20,7 +20,7 @@ def ls_all(path):
 files = ls_all(path)
 for f in files:
     print(f)
-    if f != 'u.py':
+    if f != 'u.py' and f.endswith('.html'):
         new_content = ""
         with open(f, 'r', encoding="utf-8") as old_content:
             lines = old_content.readlines()

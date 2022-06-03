@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next pisces" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="ZO2NvBun7x4uY6Z8FMaPRo4e9hxg3FiK-DTpOgL617M" />
+
+
+
+  <meta name="msvalidate.01" content="88CA92897B3650FB7187B3430D8C625D" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.1" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.1" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.4.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="keywords" content="Atomic and Optical Physics,Rabi frequency,adiabatic">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Atomic and Optical Physics I, 04 Resonance IV: Quantum Theory">
+<meta property="og:url" content="https://zqw.ink/hexo_ver/2021/11/07/MITAMO04/index.html">
+<meta property="og:site_name" content="从冰上的水">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://zqw.ink/hexo_ver/2021/11/07/MITAMO04/energy-level.png">
+<meta property="og:updated_time" content="2022-04-10T06:25:30.034Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Atomic and Optical Physics I, 04 Resonance IV: Quantum Theory">
+<meta name="twitter:image" content="https://zqw.ink/hexo_ver/2021/11/07/MITAMO04/energy-level.png">
+
+
+
+
+
+
+  <link rel="canonical" href="https://zqw.ink/hexo_ver/2021/11/07/MITAMO04/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Atomic and Optical Physics I, 04 Resonance IV: Quantum Theory | 从冰上的水</title>
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129332554-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-129332554-1');
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<link rel="canonical" href="<%- page.permalink %>">
+<script type="text/javascript">
+       var host = "zqw.ink";
+       if ((host == window.location.host) && (window.location.protocol != "https:"))
+           window.location.protocol = "https";
+</script>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">从冰上的水</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-bingo!">
+    <a href="/zqw/" rel="section">Bingo!</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-rfp-docs">
+    <a href="/rfp/_build/html" rel="section">rfp docs</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-动漫">
+    <a href="/anime/" rel="section">动漫</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-网站收藏夹">
+    <a href="/websites" rel="section">网站收藏夹</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-commonweal">
+    <a href="/404/" rel="section">公益 404</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zqw.ink/hexo_ver/2021/11/07/MITAMO04/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZQW">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="从冰上的水">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Atomic and Optical Physics I, 04 Resonance IV: Quantum Theory
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2021-11-07 00:00:00" itemprop="dateCreated datePublished" datetime="2021-11-07T00:00:00+08:00">2021-11-07</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/专业笔记/" itemprop="url" rel="index"><span itemprop="name">专业笔记</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2021/11/07/MITAMO04/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2021/11/07/MITAMO04/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <div id="content">
+<!-- toc -->
+<a id="more"></a>
+
+<div id="outline-container-orgb34b66e" class="outline-2">
+<h2 id="orgb34b66e">Information</h2>
+<div class="outline-text-2" id="text-orgb34b66e">
+<ul class="org-ul">
+<li>&#x5B98;&#x65B9;&#x4ECB;&#x7ECD;:
+<a href="https://ocw.mit.edu/courses/physics/8-421-atomic-and-optical-physics-i-spring-2014/" target="_blank" rel="noopener">https://ocw.mit.edu/courses/physics/8-421-atomic-and-optical-physics-i-spring-2014/</a></li>
+
+<li>&#x89C6;&#x9891;&#x5217;&#x8868;&#x5730;&#x5740;: <a href="https://www.youtube.com/playlist?list=PLUl4u3cNGP62FPGcyFJkzhqq9c5cHCK32" target="_blank" rel="noopener">https://www.youtube.com/playlist?list=PLUl4u3cNGP62FPGcyFJkzhqq9c5cHCK32</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org71cabab" class="outline-2">
+<h2 id="org71cabab">Adiabatic condition</h2>
+<div class="outline-text-2" id="text-org71cabab">
+<p>
+&#x4E0B;&#x9762;&#x63A8;&#x5BFC;&#x7EDD;&#x70ED;&#x6761;&#x4EF6; (Rapid adiabatic passage &#x4E2D;&#x7684; adiabatic) &#x7684;&#x5177;&#x4F53;&#x8868;&#x8FBE;&#x5F0F;.
+</p>
+
+<p>
+Larmor frequency \(\Omega_L = \gamma B_{\mathrm{eff}} \gg \dot{\theta}\) . \(\theta\) &#x662F;
+\(B_{\mathrm{eff}}\) &#x4E0E; \(z\) &#x8F74;&#x7684;&#x5939;&#x89D2;.
+</p>
+
+<p>
+&#x76F8;&#x540C;&#x7684;&#x78C1;&#x573A;&#x53D8;&#x5316;&#x901F;&#x5EA6;, &#x5728; \(\theta = 2\pi\) &#x9644;&#x8FD1;&#x65F6;, \(\theta\) &#x53D8;&#x5316;&#x6700;&#x660E;&#x663E;. &#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x78C1;&#x573A;&#x5300;&#x901F;&#x53D8;&#x5316;
+&#x65F6;, &#x5728; \(\theta = \pi/2\) &#x65F6;, \(\dot{\theta}\) &#x8FBE;&#x5230;&#x6700;&#x5927;&#x503C;, &#x800C; \(B_{\mathrm{eff}}\) &#x8FBE;&#x5230;&#x6700;&#x5C0F;&#x503C;,
+&#x56E0;&#x6B64;&#x53EA;&#x8981;&#x8003;&#x8651;&#x5728; \(\theta = \pi/2\) &#x9644;&#x8FD1;&#x7684;&#x60C5;&#x51B5;&#x5373;&#x53EF;.
+</p>
+
+<p>
+&#x6B64;&#x65F6;
+</p>
+\begin{align}
+  B_{z, \mathrm{eff}} = B_0 - \frac{\omega(t)}{\gamma}
+\end{align}
+\begin{align}
+\theta \approx \frac{\pi}{2} - \frac{B_{z, \mathrm{eff}}}{B_1}
+\end{align}
+\begin{align}
+\dot{\theta} = \frac{\dot{\omega}}{\gamma B_1} = \frac{\dot{\omega}}{\omega_R} \ll \omega_R
+\end{align}
+<p>
+&#x4E5F;&#x5C31;&#x662F;&#x8BF4;, the change \(\Delta\omega\) in one Rabi period has to be samaller than Rabi
+frequency.
+</p>
+\begin{align}
+  |\dot{\omega}| \ll \omega_R^2
+\end{align}
+</div>
+</div>
+
+<div id="outline-container-org98bb004" class="outline-2">
+<h2 id="org98bb004">Quantized spin in a magnetic field</h2>
+<div class="outline-text-2" id="text-org98bb004">
+<p>
+Hamiltonia
+</p>
+\begin{align}
+H = - \vec{\mu}\cdot \vec{B}_0 = - \gamma \hat{L}_z B_0
+\end{align}
+<p>
+&#x7531; Heisenberg eq of motion &#x53EF;&#x5F97;
+</p>
+\begin{align}
+ \frac{\mathrm{d}}{\mathrm{d}t} \vec{\hat{\mu}}
+     = \frac{i}{\hbar}[\hat{H}, \vec{\hat{\mu}}]
+     = \frac{i}{\hbar}\gamma[\hat{H}, \vec{\hat{L}}]
+     = \gamma \vec{\hat{\mu}} \times \vec{\hat{B}}
+\end{align}
+<p>
+&#x8FD9;&#x4E2A;&#x7ED3;&#x679C;&#x662F;&#x4E25;&#x683C;&#x7684;! &#x4E0E;&#x7ECF;&#x5178;&#x7684;&#x7ED3;&#x679C;&#x662F;&#x4E00;&#x81F4;&#x7684;.
+</p>
+
+<p>
+&#x5199;&#x6210;&#x671F;&#x671B;
+</p>
+\begin{align}
+ \frac{\mathrm{d}}{\mathrm{d}t} \langle\vec{\hat{\mu}}\rangle
+     = \gamma \langle\vec{\hat{\mu}}\rangle \times \vec{\hat{B}}
+\end{align}
+
+<ul class="org-ul">
+<li>valid for any spin</li>
+
+<li>valid for spin \(1/2\) \(\Rightarrow\) any two level system</li>
+
+<li>composite angular momentum (&#x6BD4;&#x5982;&#x539F;&#x5B50;&#x7684;&#x603B;&#x89D2;&#x52A8;&#x91CF;) (unless \(B\) field is so strong
+that it breaks up the coupling of the angular momentum)</li>
+
+<li>valid for a system of \(N\) two-level systems (e.g. Dicke superradiance).</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org89de259" class="outline-2">
+<h2 id="org89de259">Two level system spin \(1/2\)</h2>
+<div class="outline-text-2" id="text-org89de259">
+<p>
+What is the level structure of the electron in magnetic field?
+</p>
+
+<p>
+Spin down is lowest state for the electron!
+</p>
+
+<p>
+The magnetic moment has to point in the pulse direction( \(\vec{B}\) ), which up,
+but the electron has negtive charge, the \(\gamma\) factor is <b>negtive</b> and that&apos;s why
+for electron, the vector of spin and the vector of the magnetic momentum are
+oppsite. (&#x5DEE;&#x4E00;&#x8D1F;&#x53F7;)
+</p>
+\begin{align}
+  \langle \mu_z \rangle = \frac{\gamma\hbar}{2}(P_{\downarrow} - P_{\uparrow}) = - \frac{\gamma\hbar}{2}(2P_e - 1)
+\end{align}
+\begin{align}
+P_e(t) = \frac{1}{2} - \frac{1}{\hbar\gamma} \langle\mu_z\rangle
+    = \frac{1}{2} - \frac{1}{2}
+     \left( 1 - 2 \frac{\omega_R^2}{\Omega_R^2}\sin^2 \frac{\Omega_Rt}{2} \right)
+\end{align}
+<p>
+&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x7B49;&#x53F7;&#x5229;&#x7528;&#x4E86;&#x7ECF;&#x5178;&#x56FE;&#x50CF;&#x7ED9;&#x51FA;&#x7684;&#x7ED3;&#x679C;. \(P_e\) for \(P\) excited.
+</p>
+
+<p>
+&#x5982;&#x679C;&#x53D6; \(P_g(t = 0) = 1\) , &#x90A3;&#x4E48; Rabi transition probability
+</p>
+\begin{align}
+P_e(t) = \frac{\omega_R^2}{\Omega_R^2} \sin^2 \frac{\Omega_Rt}{2}
+\end{align}
+</div>
+</div>
+
+<div id="outline-container-orgca552a2" class="outline-2">
+<h2 id="orgca552a2">Spin \(\frac{1}{2}\) Hamiltonian</h2>
+<div class="outline-text-2" id="text-orgca552a2">
+\begin{align}
+H = \frac{\hbar}{2} \begin{pmatrix}
+         \omega_0  &amp;  \omega_Re^{-\mathrm{i}\omega t}\\
+         \omega_Re^{\mathrm{i}\omega t} &amp; -\omega_0
+    \end{pmatrix}
+\end{align}
+<p>
+Question: Can be exactly realized in nature? Or it is an approximation?
+</p>
+
+<p>
+Can be exactly realized in nature!
+</p>
+
+\begin{align}
+  H_0 =&amp; - \vec{\mu}\cdot \vec{B}_0 = - \gamma \hat{S}_z B_0 \\
+      =&amp;\frac{\hbar}{2}\omega_0 \begin{pmatrix}
+            1 &amp; 0\\
+            0 &amp; -1
+         \end{pmatrix}
+      = \frac{\hbar\omega_0}{2}\sigma_z
+\end{align}
+<p>
+\(|e\rangle, |g\rangle\) eigenstates with eigenvalues \(\pm \frac{\hbar\omega_0}{2}\)
+</p>
+
+<p>
+Now add rotating fields
+</p>
+\begin{align}
+H_1 =&amp; -\vec{\mu} \cdot\vec{B}_1(t)
+   = -\vec{\mu}\cdot \frac{\omega_R}{\gamma}(-\hat{e}_{x}\cos\omega t - \hat{e}_y\sin\omega t) \\
+  =&amp; \omega_R (\hat{S}_x\cos\omega t + \hat{S}_y \sin\omega t)\\
+  =&amp; \frac{\hbar\omega_R}{2}\begin{pmatrix}
+             0   &amp; e^{-\mathrm{i}\omega t} \\
+            e^{\mathrm{i}\omega t} &amp; 0
+          \end{pmatrix}
+\end{align}
+<p>
+So \(H = H_0 + H_1\) .
+</p>
+
+<p>
+We go complex in our Hamiltonian, not because we have approximated a real field
+\(\cos \omega t\) by \(e^{\mathrm{i}\omega t}\) , but because when we have a rotating field
+and we write down it in Pauli spin matrix, we get imaginary units for the \(\sigma_y\)
+spin matrix.
+</p>
+
+<p>
+Famous dressed atom Hamiltonian describes two-level system <b>+</b> one mode of the
+EM field (with arbitrary amplitudes). (8.422 &#x8BFE;&#x7A0B;&#x4F1A;&#x7EC6;&#x8BB2;)
+</p>
+
+<p>
+Since dressed atom picture in the standard way assumes that the photon number
+\(N\) is large. There is a correspondance that in the limit of \(N\) being large,
+the Fock state descriptin and the coherent state description fully agree.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0a91a12" class="outline-2">
+<h2 id="org0a91a12">Solution of the Hamiltonian</h2>
+<div class="outline-text-2" id="text-org0a91a12">
+<p>
+Transform to rotating frame. Unitary transofrmation (Rotation operation around
+\(\hat{e}_z\) )
+</p>
+\begin{align}
+U = \left.e^{\mathrm{i}\frac{S_z}{\hbar}\theta}\right|_{\theta = \omega t} =
+\begin{pmatrix}
+e^{\mathrm{i} \omega t/2} &amp; 0\\
+0 &amp; e^{-\mathrm{i}\omega t/2}
+\end{pmatrix}
+\end{align}
+<p>
+Then
+</p>
+\begin{align}
+H&apos; = \frac{\hbar}{2}
+\begin{pmatrix}
+\delta  &amp; \omega_R \\
+\omega_R &amp; -\delta
+\end{pmatrix}
+\end{align}
+<p>
+is time independent, where \(\delta = \omega - \omega_0\) . Care about \(U \mathrm{i}\hbar\partial_t
+U^{\dagger}\) result a term \(\sim \omega \sigma_z\) .
+</p>
+
+<p>
+Solve it (homework # 1). A special case amplitudes
+</p>
+\begin{align}
+a_{g} (0) =&amp; 1 \\
+|a_e(t)|^2 =&amp; \frac{\omega_R^2}{\Omega_R^2}\sin^2 \frac{\Omega_Rt}{2}
+\end{align}
+<p>
+as derived before.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org29ae2d5" class="outline-2">
+<h2 id="org29ae2d5">Rapid adiabatic passage &#x2014; Quantum treatment</h2>
+<div class="outline-text-2" id="text-org29ae2d5">
+<p>
+&#x65E0;&#x65CB;&#x8F6C;&#x7684;&#x78C1;&#x573A;&#x65F6;
+</p>
+\begin{align}
+H_0 = \frac{\hbar}{2}
+\begin{pmatrix}
+\delta  &amp; 0 \\
+0  &amp; -\delta
+\end{pmatrix}
+\end{align}
+<p>
+&#x672C;&#x5F81;&#x80FD;&#x91CF;&#x5982;&#x56FE;&#x4E2D;&#x865A;&#x7EBF;
+</p>
+
+
+<div class="figure">
+<p><img src="/hexo_ver/2021/11/07/MITAMO04/energy-level.png">
+</p>
+</div>
+
+<p>
+&#x5F53;&#x52A0;&#x5165;&#x65CB;&#x8F6C;&#x7684;&#x78C1;&#x573A;&#x65F6;
+</p>
+\begin{align}
+H_0 = \frac{\hbar}{2}
+\begin{pmatrix}
+\delta  &amp; \omega_R \\
+\omega_R  &amp; -\delta
+\end{pmatrix}
+\end{align}
+<p>
+&#x672C;&#x5F81;&#x80FD;&#x91CF;&#x4E3A; \(\pm\sqrt{\omega_R^2 + \delta^2}\) , &#x4E3A;&#x56FE;&#x4E2D;&#x84DD;&#x7EBF;, avoid the crossing. &#x6240;&#x4EE5;&#x5F53;&#x6211;&#x4EEC;&#x6162;
+&#x6162;&#x626B;&#x8FC7; \(\delta = 0\) &#x65F6;,
+&#x4F1A;&#x4FDD;&#x6301;&#x5728;&#x84DD;&#x7EBF;&#x4E0A;, spin &#x88AB;&#x7FFB;&#x8F6C;. Landau Zener problem, sweep the system through the
+avoided crossing.
+</p>
+
+<p>
+&#x4F46;&#x5728; \(\delta = 0\) &#x65F6;&#x4F1A;&#x6709;&#x4E00;&#x5B9A;&#x6982;&#x7387;&#x4ECE;&#x4E00;&#x6761;&#x84DD;&#x7EBF;&#x8DC3;&#x8FC1;&#x5230;&#x53E6;&#x5916;&#x4E00;&#x6761;&#x84DD;&#x7EBF;, &#x6211;&#x4EEC;&#x4E0D;&#x52A0;&#x8BC1;&#x660E;&#x5730;&#x7ED9;&#x51FA;
+probability to jump from one level to the another one
+</p>
+\begin{align}
+P_{\mathrm{na}} = e^{- 2\pi \Gamma}
+\end{align}
+<p>
+where \(\mathrm{na}\) means non-adiabatic, \(\Gamma\) is landau-Zener parameter given as
+</p>
+\begin{align}
+\Gamma = \left(\frac{\omega_R}{2}\right)^2 \left[ \frac{\mathrm{d}\omega}{\mathrm{d}t} \right]^{-1}
+ = \frac{1}{4}\frac{\omega_R^2}{\dot{\omega}}
+\end{align}
+<p>
+&#x56E0;&#x6B64;&#x5728;&#x4E4B;&#x524D;&#x7684; adiabatic &#x7684;&#x6761;&#x4EF6;&#x4E0B; \(\omega_{R}^2/\dot{\omega} \gg 1\) , &#x4F7F;&#x5F97; \(P_{\mathrm{na}}\)
+&#x5F88;&#x5C0F;.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org05cde6c" class="outline-2">
+<h2 id="org05cde6c">Fast Sweep (&#x6CA1;&#x6709;&#x5B8C;&#x5168;&#x7406;&#x89E3;)</h2>
+<div class="outline-text-2" id="text-org05cde6c">
+<p>
+&#x53E6;&#x4E00;&#x79CD;&#x6781;&#x9650;, if you go much faster than the Rabi frequency, the spin has no
+opportunity to change its orientation.
+</p>
+
+<p>
+Let&apos;s estimate the result in perturbation. Should we calculate that transition
+probability by using perturbation theory for an incoherent transition or for
+coherent transition?
+</p>
+
+<p>
+Coherent!
+</p>
+
+<p>
+&#x533A;&#x522B;&#x5728;&#x4E8E;
+</p>
+
+<ul class="org-ul">
+<li>Coherent: population \(\dot{a}_2 = -\mathrm{i}\frac{H_{12}}{\hbar}\) with \(H_{12} =
+  \frac{\hbar}{2}\omega_R\) , &#x90A3;&#x4E48;&#x77ED;&#x65F6;&#x7684;&#x6F14;&#x5316;&#x4E3A; \(a_2 = \frac{1}{2}\omega_R t\) , so \(P_2\sim |a_2|^2
+  =\omega_R^2 t_{\mathrm{eff}}^2\) , effective time \(t_{\mathrm{eff}}\) (when wave
+function really changes) of driving the
+system. Coherent process are always quadratic in time.</li>
+
+<li>Incoherent: Fermi&apos;s Golden Rule \(P \sim \frac{\omega_R^2
+  t_{\mathrm{eff}}}{\mathrm{density\, of\, states}}\)</li>
+</ul>
+
+<p>
+Q: What is \(t_{\mathrm{eff}}\) in LZ?
+</p>
+
+<ul class="org-ul">
+<li>A. \(t_{\mathrm{eff}} \sim \frac{\omega_R}{\dot{\omega}}\)</li>
+
+<li>B. \(t_{\mathrm{eff}} \sim \sqrt{\frac{1}{\dot{\omega}}}\)</li>
+
+<li>C. \(t_{\mathrm{eff}} \sim \frac{1}{\omega_R}\)</li>
+</ul>
+
+<p>
+the answer is B. \(t_{\mathrm{eff}}\) is the &quot;dephasing&quot; time \(\Delta t\) , the time
+during which everything is coherent
+</p>
+\begin{align}
+\Delta\omega \cdot \Delta t = \dot{\omega} \Delta t \cdot\Delta t \sim \pi \Rightarrow \Delta t \sim \sqrt{\frac{1}{\dot{\omega}}}
+\end{align}
+
+<p>
+Expand \(e^{- 2\pi \Gamma}\) (small \(\Gamma\) )
+</p>
+\begin{align}
+1 - P_{\mathrm{na}} = 2\pi\Gamma \propto \frac{\omega_R^2}{\dot{\omega}}
+\end{align}
+</div>
+</div>
+
+<div id="outline-container-org67e90d1" class="outline-2">
+<h2 id="org67e90d1">Reference</h2>
+</div>
+</div>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Atomic-and-Optical-Physics/" rel="tag"># Atomic and Optical Physics</a>
+          
+            <a href="/tags/Rabi-frequency/" rel="tag"># Rabi frequency</a>
+          
+            <a href="/tags/adiabatic/" rel="tag"># adiabatic</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/11/04/MITAMO03/" rel="next" title="Atomic and Optical Physics I, 03 ResonanceIII: Rapid adiabatic passage">
+                <i class="fa fa-chevron-left"></i> Atomic and Optical Physics I, 03 ResonanceIII: Rapid adiabatic passage
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/11/10/matplot_fonts/" rel="prev" title="python matplotlib 画图小技巧: 自定义字体">
+                python matplotlib 画图小技巧: 自定义字体 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">ZQW</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/phyer219" target="_blank" title="GitHub">GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:zeqing6688@126.com" target="_blank" title="E-Mail">E-Mail</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#orgb34b66e"><span class="nav-text">Information</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org71cabab"><span class="nav-text">Adiabatic condition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org98bb004"><span class="nav-text">Quantized spin in a magnetic field</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org89de259"><span class="nav-text">Two level system spin \(1/2\)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orgca552a2"><span class="nav-text">Spin \(\frac{1}{2}\) Hamiltonian</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org0a91a12"><span class="nav-text">Solution of the Hamiltonian</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org29ae2d5"><span class="nav-text">Rapid adiabatic passage — Quantum treatment</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org05cde6c"><span class="nav-text">Fast Sweep (没有完全理解)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org67e90d1"><span class="nav-text">Reference</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2022</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ZQW</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: true,
+        notify: true,
+        appId: 'HxcUg2XNBWPi9lDuoyHrlC1Y-gzGzoHsz',
+        appKey: 'xOIbh9F1fupdsCevG0asqN0W',
+        placeholder: '.',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: false
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

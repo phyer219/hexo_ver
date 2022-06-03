@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next pisces" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="ZO2NvBun7x4uY6Z8FMaPRo4e9hxg3FiK-DTpOgL617M" />
+
+
+
+  <meta name="msvalidate.01" content="88CA92897B3650FB7187B3430D8C625D" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.1" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.1" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.4.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="keywords" content="Atomic and Optical Physics,Rabi frequency,pi pulse,Lamor frequency">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Atomic and Optical Physics I, 03 ResonanceIII: Rapid adiabatic passage">
+<meta property="og:url" content="https://zqw.ink/hexo_ver/2021/11/04/MITAMO03/index.html">
+<meta property="og:site_name" content="从冰上的水">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://zqw.ink/hexo_ver/2021/11/04/MITAMO03/pi-pulse.png">
+<meta property="og:image" content="https://zqw.ink/hexo_ver/2021/11/04/MITAMO03/rabi-freq.png">
+<meta property="og:image" content="https://zqw.ink/hexo_ver/2021/11/04/MITAMO03/RAP.png">
+<meta property="og:updated_time" content="2022-04-10T06:25:30.027Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Atomic and Optical Physics I, 03 ResonanceIII: Rapid adiabatic passage">
+<meta name="twitter:image" content="https://zqw.ink/hexo_ver/2021/11/04/MITAMO03/pi-pulse.png">
+
+
+
+
+
+
+  <link rel="canonical" href="https://zqw.ink/hexo_ver/2021/11/04/MITAMO03/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Atomic and Optical Physics I, 03 ResonanceIII: Rapid adiabatic passage | 从冰上的水</title>
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129332554-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-129332554-1');
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<link rel="canonical" href="<%- page.permalink %>">
+<script type="text/javascript">
+       var host = "zqw.ink";
+       if ((host == window.location.host) && (window.location.protocol != "https:"))
+           window.location.protocol = "https";
+</script>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">从冰上的水</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-bingo!">
+    <a href="/zqw/" rel="section">Bingo!</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-rfp-docs">
+    <a href="/rfp/_build/html" rel="section">rfp docs</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-动漫">
+    <a href="/anime/" rel="section">动漫</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-网站收藏夹">
+    <a href="/websites" rel="section">网站收藏夹</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-commonweal">
+    <a href="/404/" rel="section">公益 404</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zqw.ink/hexo_ver/2021/11/04/MITAMO03/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZQW">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="从冰上的水">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Atomic and Optical Physics I, 03 ResonanceIII: Rapid adiabatic passage
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2021-11-04 00:00:00" itemprop="dateCreated datePublished" datetime="2021-11-04T00:00:00+08:00">2021-11-04</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/专业笔记/" itemprop="url" rel="index"><span itemprop="name">专业笔记</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2021/11/04/MITAMO03/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2021/11/04/MITAMO03/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <div id="content">
+<!-- toc -->
+<a id="more"></a>
+
+<div id="outline-container-orgfc69b32" class="outline-2">
+<h2 id="orgfc69b32">Information</h2>
+<div class="outline-text-2" id="text-orgfc69b32">
+<ul class="org-ul">
+<li>&#x5B98;&#x65B9;&#x4ECB;&#x7ECD;:
+<a href="https://ocw.mit.edu/courses/physics/8-421-atomic-and-optical-physics-i-spring-2014/" target="_blank" rel="noopener">https://ocw.mit.edu/courses/physics/8-421-atomic-and-optical-physics-i-spring-2014/</a></li>
+
+<li>&#x89C6;&#x9891;&#x5217;&#x8868;&#x5730;&#x5740;: <a href="https://www.youtube.com/playlist?list=PLUl4u3cNGP62FPGcyFJkzhqq9c5cHCK32" target="_blank" rel="noopener">https://www.youtube.com/playlist?list=PLUl4u3cNGP62FPGcyFJkzhqq9c5cHCK32</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgdd06634" class="outline-2">
+<h2 id="orgdd06634">Atomic clocks</h2>
+</div>
+
+<div id="outline-container-org09d3125" class="outline-2">
+<h2 id="org09d3125">Motion in a rotating magnetic field, Resonance, \(\pi\) pulse</h2>
+<div class="outline-text-2" id="text-org09d3125">
+<p>
+&#x8003;&#x8651; classical &#x7684;&#x60C5;&#x51B5;.
+</p>
+
+<p>
+&#x5047;&#x8BBE;&#x78C1;&#x77E9; \(\vec{\mu}\) &#x5904;&#x4E8E;&#x78C1;&#x573A;&#x4E2D;&#x78C1;&#x573A;&#x4E3A;
+</p>
+\begin{align}
+  \vec{B}(t) = B_0 \hat{e}_z + B_1(\hat{e}_x \cos \Omega_Lt - \hat{e}_y \sin\Omega_Lt)
+\end{align}
+<p>
+&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5728; \(z\) &#x65B9;&#x5411;&#x6709;&#x4E00;&#x4E2A; static field, &#x5728; \(xoy\) &#x5E73;&#x9762;&#x5185;&#x6709;&#x4E00;&#x4E2A;&#x4EE5; Lamor &#x9891;&#x7387; \(\Omega_L
+= -\gamma B_0\) &#x65CB;&#x8F6C;&#x7684; rotating field.
+&#x5728; rotating frame ( \(x&apos;, y&apos;, z\) ) &#x4E2D;, &#x6839;&#x636E;&#x4E0A;&#x4E00;&#x8282;&#x7684;&#x77E5;&#x8BC6;, &#x7B49;&#x6548;&#x7684;&#x78C1;&#x573A;&#x4E3A;
+</p>
+\begin{align}
+B_{\mathrm{eff}} = (B_0 + \frac{\Omega_L}{\gamma})\hat{e}_z + B_1\hat{e}_x = B_1\hat{e}_{x&apos;}
+\end{align}
+<p>
+&#x4E5F;&#x5C31;&#x662F;&#x8BF4; \(z\) &#x65B9;&#x5411;&#x7684; static field &#x88AB;&#x62B5;&#x6D88;, &#x53EA;&#x5269;&#x4E0B; \(x&apos;\) &#x65B9;&#x5411;&#x7684;&#x4E00;&#x4E2A; static field. &#x56E0;
+&#x6B64;, \(\vec{\mu}\) &#x4F1A;&#x7ED5; \(x&apos;\) &#x8F74;&#x4EE5; Rabi &#x9891;&#x7387; \(\omega_R = - \gamma B_{1}\) &#x8FDB;&#x52A8;. &#x56E0;&#x6B64;&#x603B;&#x7684;&#x6548;&#x679C;&#x662F;&#x4F1A;
+&#x5C06; spin flip &#x4E00;&#x4E0B;. &#x6BD4;&#x5982;
+</p>
+\begin{align}
+  t =&amp; 0, \quad\vec{\mu} = \mu \hat{e}_z \\
+  t =&amp; \frac{\pi}{\omega_R}, \quad\vec{\mu} = \mu \hat{e}_z
+\end{align}
+<p>
+&#x4E5F;&#x53EB; \(\pi\) pulse.
+</p>
+
+
+<div class="figure">
+<p><img src="/hexo_ver/2021/11/04/MITAMO03/pi-pulse.png">
+</p>
+</div>
+
+<p>
+&#x5982;&#x679C;&#x78C1;&#x573A;&#x4E0D;&#x662F; rotating &#x7684;, &#x6BD4;&#x5982;&#x662F;&#x6CBF;&#x67D0;&#x4E2A;&#x65B9;&#x5411;&#x7EBF;&#x504F;&#x632F;&#x7684;, &#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x5206;&#x89E3;&#x6210;&#x4E24;&#x4E2A;&#x65B9;&#x5411;&#x76F8;&#x53CD;&#x7684;
+rotating &#x7684;&#x53E0;&#x52A0;. &#x5728; rotating frame &#x4E2D;, &#x4E00;&#x4E2A;&#x65B9;&#x5411;&#x7684; rotating &#x4F1A;&#x53D8;&#x6210; static, &#x800C;&#x53E6;&#x4E00;
+&#x4E2A;&#x65B9;&#x5411;&#x4E0A;&#x7684; rotating &#x4F1A;&#x53D8;&#x6210;&#x539F;&#x6765;&#x9891;&#x7387;&#x7684; 2 &#x500D; rotating, &#x8FD9;&#x4E2A;&#x9AD8;&#x9891;&#x7684; rotating &#x901A;&#x5E38;&#x4E0D;&#x4F1A;
+&#x6709;&#x7269;&#x7406;&#x6548;&#x679C;, &#x6240;&#x4EE5;&#x88AB;&#x5FFD;&#x7565;, &#x8FD9;&#x5C31;&#x662F; rotating wave approximation!
+</p>
+</div>
+</div>
+
+<div id="outline-container-org699eca0" class="outline-2">
+<h2 id="org699eca0">Generalized Rabi Frequency</h2>
+<div class="outline-text-2" id="text-org699eca0">
+<p>
+&#x5982;&#x679C; \(B_{1}\) rotating &#x7684; frequency \(\omega \neq \Omega_L\) , &#x90A3;&#x4E48;&#x7B49;&#x6548;&#x7684;&#x78C1;&#x573A;&#x5C31;&#x4E0D;&#x4F1A;&#x5B8C;&#x5168;&#x62B5;&#x6D88;
+\(B_0\) , &#x90A3;&#x4E48;
+</p>
+\begin{align}
+  \vec{B}_{\mathrm{eff}} = B_1 \hat{e}_{x&apos;}
+           + \left(B_0 - \frac{\omega}{\gamma} \right) \hat{e}_z
+\end{align}
+<p>
+&#x5176;&#x5927;&#x5C0F;&#x4E3A;
+</p>
+\begin{align}
+|B_{\mathrm{eff}}| = \sqrt{B_1^2 + (B_0 - \frac{\omega}{\gamma})^2}
+\end{align}
+<p>
+&#x53EF;&#x4EE5;&#x5B9A;&#x4E49; generalized Rabi frequency (&#x4E4B;&#x540E;&#x90FD;&#x53D6; \(\gamma = |\gamma|\) ?)
+</p>
+\begin{align}
+\Omega_{R} = \gamma B_{\mathrm{eff}} = \sqrt{(\omega_L - \omega)^2 + \omega_R^2}
+  = \sqrt{\omega_R^2 + \delta^2}
+\end{align}
+<p>
+&#x5176;&#x4E2D; detuning \(\delta = \omega_L - \omega\)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org69a6630" class="outline-2">
+<h2 id="org69a6630">Compare with quantum result</h2>
+<div class="outline-text-2" id="text-org69a6630">
+<p>
+&#x5982;&#x56FE;, &#x5BF9;&#x4E24;&#x4E2A;&#x4E09;&#x89D2;&#x5F62;&#x7528;&#x4F59;&#x5F26;&#x5B9A;&#x7406;
+</p>
+\begin{align}
+A^2 =&amp; 2 \mu^2 (1 - \cos\alpha) \\
+A^2 =&amp; 2 \mu^{2} \sin^2\theta (1 - \cos\phi)
+\end{align}
+<p>
+&#x5E76;&#x5229;&#x7528;
+</p>
+\begin{align}
+ \sin \theta =&amp; \frac{B_1}{B_{\mathrm{eff}}} = \frac{\omega_R}{\Omega_R} \\
+  \phi(t) =&amp; \Omega_R t
+\end{align}
+<p>
+&#x53EF;&#x4EE5;&#x4E25;&#x683C;&#x5730;&#x6C42;&#x5F97; \(\mu\) &#x5728; \(z\) &#x65B9;&#x5411;&#x4E0A;&#x7684;&#x6295;&#x5F71;
+</p>
+\begin{align}
+  \mu_z(t) = \mu\sin\cos\alpha = \mu \left[ 1 -
+   2 \frac{\omega_R^2}{\Omega_{R}^2}\sin^{2} \left( \frac{\Omega_R}{2}t \right) \right]
+\end{align}
+
+
+<div class="figure">
+<p><img src="/hexo_ver/2021/11/04/MITAMO03/rabi-freq.png">
+</p>
+</div>
+
+<p>
+&#x5982;&#x679C;&#x6211;&#x4EEC;&#x5B9A;&#x4E49;
+</p>
+\begin{align}
+P_{\uparrow \to \downarrow} \equiv \frac{\mu_z(0) - \mu_z(t)}{2 \mu_z(0)}
+\end{align}
+<p>
+&#x90A3;&#x4E48;
+</p>
+\begin{align}
+P_{\uparrow \to \downarrow} = \frac{\omega_R^2}{\Omega_{R}^2}\sin^{2} \left( \frac{\Omega_R}{2}t \right)
+\end{align}
+<p>
+&#x8FD9;&#x6B63;&#x662F;&#x91CF;&#x5B50;&#x7684;&#x7ED3;&#x679C;.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge691f85" class="outline-2">
+<h2 id="orge691f85">Rapid adiabatic passage (RAP) (classical counterpart of Landau-Zener transition)</h2>
+<div class="outline-text-2" id="text-orge691f85">
+<p>
+&#x73B0;&#x5728; change the frequency of the rotating field. Sweeping the frequency <b>thtrough
+the resoance</b>, we can invert the spin, we can tun over the magnetic moment in a
+very robust way.
+</p>
+
+<ul class="org-ul">
+<li><b>slow</b>: compare to the Larmor frequency</li>
+
+<li><b>rapid</b>: compare to all the things mentioned here(decoherence and relaxition
+processes).</li>
+</ul>
+
+<p>
+&#x8FD9;&#x91CC;&#x4E0D;&#x505A;&#x4E25;&#x683C;&#x8BA1;&#x7B97;, &#x53EA;&#x7ED9;&#x4E00;&#x4E2A; intuitive picture
+</p>
+
+<p>
+\(\vec{\mu}\) , static field \(\vec{B}_0\) , \(\vec{B}_1\) rotating at \(\omega\) , \(|B_{1}|
+\ll |B_0|\) , start with \(\omega &lt;&lt; \gamma B_{0}\)
+</p>
+
+
+<div class="figure">
+<p><img src="/hexo_ver/2021/11/04/MITAMO03/RAP.png">
+</p>
+</div>
+
+<p>
+In adiabatic limit, the spin processes tightly ( \(\theta\) is small) around
+\(\vec{B}_{\mathrm{eff}}\) , follows the direction of the effective magnetic
+field.
+</p>
+
+<p>
+&#x6240;&#x4EE5;&#x5F53;&#x626B;&#x5230; detuning \(\delta = 0\) &#x65F6;, \(\vec{\mu}\) &#x8F6C;&#x5230;&#x4E86; \(x&apos;\) &#x65B9;&#x5411;, &#x5F53;&#x7EE7;&#x7EED;&#x626B;&#x5230; \(\omega
+\gg \gamma B_0\) &#x65F6;, spin &#x88AB; flip.
+</p>
+
+<p>
+&#x65E0;&#x8BBA;&#x662F;&#x4ECE;&#x9AD8;&#x9891;&#x5411;&#x4F4E;&#x9891;&#x626B;, &#x8FD8;&#x662F;&#x4ECE;&#x4F4E;&#x9891;&#x5411;&#x9AD8;&#x9891;&#x626B;, &#x53EA;&#x8981;&#x626B;&#x8FC7;&#x5171;&#x632F;&#x9891;&#x7387;, the rapid adiabatic
+passage always swaps the spin state.
+</p>
+
+<p>
+&#x8FD9;&#x5728;&#x5B9E;&#x9A8C;&#x4E0A;&#x5F88;&#x6709;&#x7528;, &#x56E0;&#x4E3A;&#x50CF;&#x4E4B;&#x524D;&#x90A3;&#x6837;&#x76F4;&#x63A5;&#x52A0;&#x5230;&#x5171;&#x632F;&#x9891;&#x7387;&#x4E0A;, &#x5982;&#x679C;&#x9891;&#x7387;&#x7A0D;&#x6709;&#x504F;&#x5DEE;, spin &#x5C31;&#x4E0D;
+&#x4F1A;&#x5B8C;&#x5168;&#x88AB; flip. &#x4F46;&#x662F; RAP &#x7684;&#x8BDD;, &#x53EA;&#x8981;&#x626B;&#x8FC7;&#x5171;&#x632F;&#x9891;&#x7387;, spin &#x5C31;&#x4F1A;&#x88AB;&#x5B8C;&#x7F8E;&#x5730; flip!
+</p>
+
+<p>
+&#x540C;&#x6837;&#x7684;&#x7269;&#x7406;&#x673A;&#x5236;, &#x4F46;&#x662F;&#x64CD;&#x4F5C;&#x5B8C;&#x5168;&#x4E0D;&#x4E00;&#x6837;, &#x5C31;&#x662F;&#x8BA9; spin &#x5728; quadrapolar fields magnetic
+trap &#x4E2D;&#x540C;&#x79FB;&#x52A8;, &#x78C1;&#x573A;&#x4E5F;&#x80FD;&#x4ECE;&#x4E00;&#x4E2A;&#x65B9;&#x5411;&#x626B;&#x5230;&#x76F8;&#x53CD;&#x7684;&#x65B9;&#x5411;. &#x5728;&#x4E2D;&#x95F4;&#x53EF;&#x80FD;&#x53D1;&#x751F; Majorana losses.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga75a23f" class="outline-2">
+<h2 id="orga75a23f">Reference</h2>
+</div>
+</div>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Atomic-and-Optical-Physics/" rel="tag"># Atomic and Optical Physics</a>
+          
+            <a href="/tags/Rabi-frequency/" rel="tag"># Rabi frequency</a>
+          
+            <a href="/tags/pi-pulse/" rel="tag"># pi pulse</a>
+          
+            <a href="/tags/Lamor-frequency/" rel="tag"># Lamor frequency</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/10/21/dash_circle/" rel="next" title="python matplotlib 画图小技巧: 虚线的圆与虚线的五角星">
+                <i class="fa fa-chevron-left"></i> python matplotlib 画图小技巧: 虚线的圆与虚线的五角星
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/11/07/MITAMO04/" rel="prev" title="Atomic and Optical Physics I, 04 Resonance IV: Quantum Theory">
+                Atomic and Optical Physics I, 04 Resonance IV: Quantum Theory <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">ZQW</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/phyer219" target="_blank" title="GitHub">GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:zeqing6688@126.com" target="_blank" title="E-Mail">E-Mail</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#orgfc69b32"><span class="nav-text">Information</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orgdd06634"><span class="nav-text">Atomic clocks</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org09d3125"><span class="nav-text">Motion in a rotating magnetic field, Resonance, \(\pi\) pulse</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org699eca0"><span class="nav-text">Generalized Rabi Frequency</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org69a6630"><span class="nav-text">Compare with quantum result</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orge691f85"><span class="nav-text">Rapid adiabatic passage (RAP) (classical counterpart of Landau-Zener transition)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orga75a23f"><span class="nav-text">Reference</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2022</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ZQW</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: true,
+        notify: true,
+        appId: 'HxcUg2XNBWPi9lDuoyHrlC1Y-gzGzoHsz',
+        appKey: 'xOIbh9F1fupdsCevG0asqN0W',
+        placeholder: '.',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: false
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

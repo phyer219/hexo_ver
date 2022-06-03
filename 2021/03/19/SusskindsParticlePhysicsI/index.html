@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next pisces" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="ZO2NvBun7x4uY6Z8FMaPRo4e9hxg3FiK-DTpOgL617M" />
+
+
+
+  <meta name="msvalidate.01" content="88CA92897B3650FB7187B3430D8C625D" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.1" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.1" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.4.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="keywords" content="Susskind,physics,Particle Physics,Quantum Field Theory,Stimulated Emission,Group Velocity,Phase Velocity">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Susskind&#39;s Particle Pyhsics I: Basic Concepts Note">
+<meta property="og:url" content="https://zqw.ink/hexo_ver/2021/03/19/SusskindsParticlePhysicsI/index.html">
+<meta property="og:site_name" content="从冰上的水">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://zqw.ink/hexo_ver/2021/03/19/SusskindsParticlePhysicsI/reaction.png">
+<meta property="og:image" content="https://zqw.ink/hexo_ver/2021/03/19/SusskindsParticlePhysicsI/scattering.png">
+<meta property="og:updated_time" content="2022-04-10T06:25:30.017Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Susskind&#39;s Particle Pyhsics I: Basic Concepts Note">
+<meta name="twitter:image" content="https://zqw.ink/hexo_ver/2021/03/19/SusskindsParticlePhysicsI/reaction.png">
+
+
+
+
+
+
+  <link rel="canonical" href="https://zqw.ink/hexo_ver/2021/03/19/SusskindsParticlePhysicsI/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Susskind's Particle Pyhsics I: Basic Concepts Note | 从冰上的水</title>
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129332554-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-129332554-1');
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<link rel="canonical" href="<%- page.permalink %>">
+<script type="text/javascript">
+       var host = "zqw.ink";
+       if ((host == window.location.host) && (window.location.protocol != "https:"))
+           window.location.protocol = "https";
+</script>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">从冰上的水</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-bingo!">
+    <a href="/zqw/" rel="section">Bingo!</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-rfp-docs">
+    <a href="/rfp/_build/html" rel="section">rfp docs</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-动漫">
+    <a href="/anime/" rel="section">动漫</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-网站收藏夹">
+    <a href="/websites" rel="section">网站收藏夹</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-commonweal">
+    <a href="/404/" rel="section">公益 404</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zqw.ink/hexo_ver/2021/03/19/SusskindsParticlePhysicsI/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZQW">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="从冰上的水">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Susskind's Particle Pyhsics I: Basic Concepts Note
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2021-03-19 00:00:00" itemprop="dateCreated datePublished" datetime="2021-03-19T00:00:00+08:00">2021-03-19</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/专业笔记/" itemprop="url" rel="index"><span itemprop="name">专业笔记</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2021/03/19/SusskindsParticlePhysicsI/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2021/03/19/SusskindsParticlePhysicsI/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <div id="content">
+<!-- toc -->
+<a id="more"></a>
+
+<div id="outline-container-org44d157c" class="outline-2">
+<h2 id="org44d157c">Information</h2>
+<div class="outline-text-2" id="text-org44d157c">
+<ul class="org-ul">
+<li>&#x5B98;&#x65B9;&#x4ECB;&#x7ECD;: <a href="https://theoreticalminimum.com/courses/particle-physics-1-basic-concepts/2009/fall" target="_blank" rel="noopener">https://theoreticalminimum.com/courses/particle-physics-1-basic-concepts/2009/fall</a></li>
+
+<li>&#x89C6;&#x9891;&#x5217;&#x8868;&#x5730;&#x5740;: <a href="https://www.youtube.com/watch?v=2eFvVzNF24g&amp;list=PLaTmJYdn8i5zI1To7uSg75eNA_AKXGUl0" target="_blank" rel="noopener">https://www.youtube.com/watch?v=2eFvVzNF24g&amp;list=PLaTmJYdn8i5zI1To7uSg75eNA_AKXGUl0</a></li>
+
+<li>&#x628A;&#x4E3B;&#x8981;&#x5185;&#x5BB9;&#x6574;&#x7406;&#x4E00;&#x4E0B;.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org278c830" class="outline-2">
+<h2 id="org278c830">Lecture 1: Particles and Light</h2>
+<div class="outline-text-2" id="text-org278c830">
+</div>
+<div id="outline-container-orgd872a01" class="outline-3">
+<h3 id="orgd872a01">Wave Properties</h3>
+<div class="outline-text-3" id="text-orgd872a01">
+\begin{align}
+\boxed{\frac{\lambda}{T} = c}
+\end{align}
+\begin{align}
+f = \frac{1}{T} \quad \boxed{\lambda f = c}
+\end{align}
+\begin{align}
+\omega = 2\pi f = \boxed{2\pi \frac{c}{\lambda} = \omega}
+\end{align}
+</div>
+</div>
+
+<div id="outline-container-orgf913a07" class="outline-3">
+<h3 id="orgf913a07">Photon Properties</h3>
+<div class="outline-text-3" id="text-orgf913a07">
+\begin{align}
+\boxed{E_{\mathrm{phton}} = \hbar\omega}
+\end{align}
+\begin{align}
+E_{\mathrm{ray}} = n \hbar \omega
+\end{align}
+\begin{align}
+p = \frac{E}{c}
+\end{align}
+</div>
+</div>
+</div>
+
+<div id="outline-container-org534c22e" class="outline-2">
+<h2 id="org534c22e">Lecture 2: Review of Quantum Mechanics &amp; Harmonic Oscillator</h2>
+<div class="outline-text-2" id="text-org534c22e">
+</div>
+<div id="outline-container-org0db8e01" class="outline-3">
+<h3 id="org0db8e01">Periodic Boundary Condition</h3>
+<div class="outline-text-3" id="text-org0db8e01">
+<p>
+In order to make momentum conseved, we need periodic boundary condition, so
+</p>
+\begin{align}
+\lambda = \frac{L}{N}
+\end{align}
+<p>
+\(\lambda\) is discrete.
+</p>
+\begin{align}
+p = \frac{h}{\lambda} = \frac{h}{L}N
+\end{align}
+</div>
+</div>
+
+<div id="outline-container-orgaf5ca82" class="outline-3">
+<h3 id="orgaf5ca82">Harmonic Oscillator</h3>
+<div class="outline-text-3" id="text-orgaf5ca82">
+\begin{align}
+  E &amp;= n \hbar\omega\\
+  a^{+ }|n \rangle &amp;= \sqrt{n + 1} | n+ 1 \rangle \\
+  a^{- }|n \rangle &amp;= \sqrt{n } | n - 1\rangle \\
+  a^{+ }a^{- } &amp;\sim n \\
+  a^{- }a^{+ } &amp;\sim n + 1
+\end{align}
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf8d0328" class="outline-2">
+<h2 id="orgf8d0328">Lecture 3: Field Operators</h2>
+<div class="outline-text-2" id="text-orgf8d0328">
+</div>
+<div id="outline-container-orgb87cac4" class="outline-3">
+<h3 id="orgb87cac4">Field operator</h3>
+<div class="outline-text-3" id="text-orgb87cac4">
+<p>
+In periodic boundary conditions, a plane wave
+</p>
+\begin{align}
+  e^{\mathrm{i}kL}, \quad, k = n\frac{2\pi}{L}
+\end{align}
+<p>
+One particle with momentum \(k_7\)
+</p>
+\begin{align}
+  |0, 0, 0, 0, 0, 0, 1, 0, 0, \cdots \rangle
+\end{align}
+<p>
+Classical version of Fourier coefficient of field
+</p>
+\begin{align}
+  \psi(x) &amp;= \sum_k \alpha(k) e^{\mathrm{i} kx} \\
+  \psi^{ * }(x) = \sum_k \alpha^{ * }(k) e^{- \mathrm{i}k x}
+\end{align}
+<p>
+quantum version
+</p>
+\begin{align}
+  \psi^{ -}(x) &amp;= \sum_k \alpha^{- }(k) e^{\mathrm{i} kx} \\
+  \psi^{ + }(x) &amp;= \sum_k \alpha^{ + }(k) e^{- \mathrm{i}k x}
+\end{align}
+<p>
+Let
+</p>
+\begin{align}
+  |0\rangle \equiv&amp; |0, 0, 0, 0, 0, 0\cdots \rangle\\
+  |k_i\rangle \equiv&amp; |0, 0, 0, \cdots , 1, 0, 0\cdots \rangle ,
+    \quad\mathrm{one} \quad \mathrm{in}\quad i \mathrm{th}
+\end{align}
+<p>
+Create a particle at position \(x\)
+</p>
+\begin{align}
+  \psi^{+ }(x) |0\rangle = \sum_k e^{-\mathrm{i} k x} a^{+ }(k)| 0 \rangle
+   = \sum_k e^{-\mathrm{i} k x} | k \rangle
+\end{align}
+</div>
+</div>
+
+<div id="outline-container-org4305ba5" class="outline-3">
+<h3 id="org4305ba5">Possible  Reaction &amp; Stimulated Emission</h3>
+<div class="outline-text-3" id="text-org4305ba5">
+
+<div class="figure">
+<p><img src="/hexo_ver/2021/03/19/SusskindsParticlePhysicsI/reaction.png">
+</p>
+</div>
+
+<p>
+A particle comes in, and when it hits the target. The target happens to be
+localized at position \(x\) . That particle disappears. And then two particles
+emitted from the same spot. How would we describe this reaction?
+</p>
+\begin{align}
+  \Psi^{\dagger}(x) \Psi^{\dagger}(x) \Psi(x)|\rangle
+\end{align}
+<p>
+If that a particle with momentum \(k_i\) is absorbed at position \(x\) . What is the
+final state? What is the various probabilities for this final state to have this
+or that momentum?
+</p>
+
+<p>
+A photon comes in, hits an atom localized at a point and from that point two
+photons go off
+</p>
+\begin{align}
+  \Psi^{\dagger}(x) \Psi^{\dagger}(x) \Psi(x)|k_{\mathrm{i}}\rangle
+  =&amp; \sum_{l,m} a^{\dagger}(l) e^{-\mathrm{i}lx} a^{\dagger}(m) e^{-\mathrm{i}mx}
+    \sum_k a(k) e^{\mathrm{i}kx} |k_{\mathrm{i}}\rangle \\
+  =&amp; \sum_{l,m} a^{\dagger}(l) e^{-\mathrm{i}lx} a^{\dagger}(m) e^{-\mathrm{i}mx}
+      e^{\mathrm{i}k_{\mathrm{i}}x} |0\rangle \\
+  =&amp; \sum_{l,m} e^{\mathrm{i}(k_{\mathrm{i}} - l - m)}|l, m\rangle
+\end{align}
+<p>
+&#x672C;&#x6765;&#x60F3;&#x7528;&#x8FD9;&#x4E2A;&#x8BF4;&#x660E; stimulated emission, &#x56E0;&#x4E3A; \(l = m\) &#x65F6;&#x4F1A;&#x6709; factor \(\sqrt{2}\) ,
+&#x4EA7;&#x751F;&#x76F8;&#x540C;&#x52A8;&#x91CF;&#x7684;&#x4E24;&#x4E2A;&#x7C92;&#x5B50;&#x7684;&#x6982;&#x7387;&#x4F1A;&#x589E;&#x52A0;. &#x4F46;&#x662F;&#x7FFB;&#x8F66;&#x4E86;, &#x56E0;&#x4E3A; \(l \neq m\) &#x65F6;, &#x540C;&#x6837;&#x4E5F;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;
+\(2\) , &#x56E0;&#x4E3A; \(l = 1, m = 2\) &#x548C; \(l = 2, m = 1\) &#x90FD;&#x4F1A;&#x6709;&#x8D21;&#x732E;.
+</p>
+
+<p>
+&#x7136;&#x540E;&#x7528;&#x53E6;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x8BF4;&#x660E; stimulated emission. Supposing we have a particle which can
+decay and emit a photon.
+</p>
+\begin{align}
+  \Psi^{\dagger}(x) |0\rangle = \sum_k e^{-\mathrm{i} kx}|k\rangle
+\end{align}
+<p>
+equal probability for all \(k\) .
+</p>
+
+<p>
+If there pre-exist a particle
+</p>
+\begin{align}
+  \Psi^{\dagger}(x) |l\rangle = \sum_k e^{-\mathrm{i} kx} a^+(k)|l\rangle
+\end{align}
+<p>
+if \(k\neq l\)
+</p>
+\begin{align}
+  \Psi^{\dagger}(x) |l\rangle = \sum_k e^{-\mathrm{i} kx} |k, l\rangle
+\end{align}
+<p>
+equal probability. But if \(k = l\)
+</p>
+\begin{align}
+  e^{-\mathrm{i} kx} \sqrt{2}|k, k\rangle
+\end{align}
+<p>
+There are no photons present then just decays with coefficient \(1\) , that&apos;s
+spontaneous emission. The presence of particles of a give type will increase the
+probability that out decay takes places with the final momentum being the same
+as the momentum already there. This is stimulated emission. Bosons!
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0fd67f6" class="outline-3">
+<h3 id="org0fd67f6">Density of \(x\)</h3>
+<div class="outline-text-3" id="text-org0fd67f6">
+\begin{align}
+  \Psi^{\dagger}(x) \Psi(x)
+\end{align}
+\begin{align}
+  \frac{1}{L}\int  \Psi^{\dagger}(x) \Psi(x) \cdot\mathrm{d}x = \frac{1}{L} = \mathrm{Number}
+  \quad \mathrm{of} \quad \mathrm{particles}
+\end{align}
+</div>
+</div>
+</div>
+
+<div id="outline-container-org542b9c2" class="outline-2">
+<h2 id="org542b9c2">Lecture 4: Scattering Process</h2>
+<div class="outline-text-2" id="text-org542b9c2">
+</div>
+<div id="outline-container-org4af86c1" class="outline-3">
+<h3 id="org4af86c1">Simplest Quantum Field</h3>
+<div class="outline-text-3" id="text-org4af86c1">
+<p>
+The simplest quantum field, be a function of only one coordinate namely \(x\) .
+</p>
+\begin{align}
+  \Psi (x, t) =&amp; \sum_k a^-(k) e^{\mathrm{i}kx} e^{\mathrm{i}\omega(k)t}
+   \quad \mathrm{(Definition)} \\
+  \Psi^{\dagger} (x, t) =&amp; \sum_k a^-(k) e^{-\mathrm{i}kx} e^{\mathrm{i}\omega(k)t}
+\end{align}
+<p>
+Find the wave equation for \(\Psi\) .
+</p>
+\begin{align}
+  \frac{\partial}{\partial t} \Psi &amp;= \mathrm{i} \omega(k) \Psi \\
+  \frac{\partial}{\partial x} \Psi &amp;= \mathrm{i} k \Psi \\
+  \frac{\partial^2}{\partial x^2} \Psi &amp;= - k^2 \Psi \\
+\end{align}
+<p>
+so
+</p>
+\begin{align}
+  \mathrm{i}\frac{\partial}{\partial t} \Psi = \frac{\omega}{k}\frac{\partial^2}{\partial x^2} \Psi
+\end{align}
+<p>
+if \(\omega = \frac{k^2}{2m}\) , a non-relativitic particle
+</p>
+\begin{align}
+  \mathrm{i}\frac{\partial}{\partial t} \Psi = \frac{1}{2m}\frac{\partial^2}{\partial x^2} \Psi
+\end{align}
+<p>
+\(\Psi\) is an operator.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org042d564" class="outline-3">
+<h3 id="org042d564">A Model: Scattering</h3>
+<div class="outline-text-3" id="text-org042d564">
+
+<div class="figure">
+<p><img src="/hexo_ver/2021/03/19/SusskindsParticlePhysicsI/scattering.png">
+</p>
+</div>
+
+<p>
+A particle absorbed by a fixed target and emitted by the target instantly. This
+process is energy conserved but momentum not conserved. Averaging or integrating
+over all possiable time (set \(x_0 = 0\))
+</p>
+\begin{align}
+ \langle k_f | g \int \mathrm{d}t\cdot \Psi^{\dagger}(0, t) \Psi(0, t) | k_i \rangle
+  = 2 \pi g \delta (\omega_f - \omega_i)
+\end{align}
+<p>
+where \(g\) is coupling constant. There is connection between the fact that
+conservation of eneryg and the fact there&apos;s no preference of any specified time.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8d48b20" class="outline-2">
+<h2 id="org8d48b20">Lecture 5: Fermion</h2>
+<div class="outline-text-2" id="text-org8d48b20">
+</div>
+<div id="outline-container-org78c0d2b" class="outline-3">
+<h3 id="org78c0d2b">Phase Velocity &amp; Group Velocity</h3>
+<div class="outline-text-3" id="text-org78c0d2b">
+\begin{align}
+\omega = \sqrt{k^2 + m^2}
+\end{align}
+<p>
+for massless \(m = 0\)
+</p>
+\begin{align}
+ v_{\mathrm{p}} &amp;= \frac{\omega}{k} = 1 \\
+ v_{\mathrm{g}} &amp;= \frac{\mathrm{d}\omega}{\mathrm{d}k} = 1
+\end{align}
+<p>
+but if \(m \neq 0\)
+</p>
+\begin{align}
+ v_{\mathrm{p}} &amp;= \frac{\omega}{k} = \sqrt{1 + \frac{m^2}{k^2}} &gt; 1\\
+ v_{\mathrm{g}} &amp;= \frac{\mathrm{d}\omega}{\mathrm{d}k}
+      = \sqrt{\frac{k^2}{k^2 + m^2}} &lt; 1
+\end{align}
+<p>
+\(1\) is the speed of light. So phase velocity carries nothing.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org316e6a4" class="outline-3">
+<h3 id="org316e6a4">Fermion</h3>
+<div class="outline-text-3" id="text-org316e6a4">
+\begin{align}
+  c^{+ } |0 \rangle &amp;= |1\rangle\\
+  c^{+ } |1 \rangle &amp;= 0\\
+  c^{- } |0 \rangle &amp;= 0\\
+  c^{0 } |1 \rangle &amp;= |0\rangle\\
+\end{align}
+\begin{align}
+  \boxed{c^{+ } c^{ -} |0 \rangle  = 0 } \\
+  \boxed{c^{- } c^{ +} |0 \rangle  = |0\rangle }
+\end{align}
+</div>
+</div>
+
+<div id="outline-container-orgb17aa50" class="outline-3">
+<h3 id="orgb17aa50">Ground state</h3>
+<div class="outline-text-3" id="text-orgb17aa50">
+<p>
+Boson: Bose condensate.
+</p>
+
+<p>
+Fermion: Fermi sphere
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3cc7c5a" class="outline-3">
+<h3 id="org3cc7c5a">Dirac Equation</h3>
+<div class="outline-text-3" id="text-org3cc7c5a">
+<p>
+move speed of light( \(\omega = k\) , \(c = 1\) ), carry electric charge, only move to
+one direction
+filed \(\Psi\)
+</p>
+\begin{align}
+  \Psi = e^{\mathrm{i}(k x - \omega t)} = e^{\mathrm{i} k (x - t)}
+\end{align}
+<p>
+so
+</p>
+\begin{align}
+  \frac{\partial \Psi}{\partial t} = - \frac{\partial \Psi}{\partial x}, \quad (\mathrm{i}\omega = \mathrm{i}k)
+\end{align}
+<p>
+describe both positive and negative energy. Negative is filled.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4c6cfbc" class="outline-2">
+<h2 id="org4c6cfbc">Lecture 6: Dirac Equation &amp; Higgs Boson</h2>
+<div class="outline-text-2" id="text-org4c6cfbc">
+<p>
+Move right field
+</p>
+\begin{align}
+   \frac{\partial \Psi}{\partial t} = - \frac{\partial \Psi}{\partial x}
+\end{align}
+<p>
+Move left field
+</p>
+\begin{align}
+  \frac{\partial \Psi}{\partial t} =  \frac{\partial \Psi}{\partial x} ,\quad (\omega = -k)
+\end{align}
+\begin{align}
+  \dot{\Psi} \equiv \begin{pmatrix} \dot{\Psi}_R \\ \dot{\Psi}_L \end{pmatrix}
+   = - \begin{pmatrix} 1 &amp;0 \\0 &amp; -1 \end{pmatrix}
+    \begin{pmatrix} \frac{\partial \Psi_R}{\partial x} \\\frac{\partial \Psi_L}{\partial x} \end{pmatrix}
+  \equiv - \alpha \frac{\partial}{\partial x} \Psi
+\end{align}
+\begin{align}
+  \omega = \alpha k
+\end{align}
+<p>
+we want (not massless) \(\omega = \sqrt{k^2 + m^2}\) , so let \(\omega = \alpha k + \beta m\)
+</p>
+\begin{align}
+  \omega^2 = k^2 + m^2 = (\alpha k + \beta m)^2 \Rightarrow \alpha^2 = 1, \beta^2 = 1, \alpha\beta + \beta\alpha = 0
+\end{align}
+<p>
+so \(\beta\) can be
+</p>
+\begin{align}
+  \beta = \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix}
+\end{align}
+<p>
+so
+</p>
+\begin{align}
+  \mathrm{i} \begin{pmatrix} \dot{\Psi}_R \\ \dot{\Psi}_L \end{pmatrix}
+  = - \mathrm{i} \alpha \frac{\partial}{\partial x}\Psi + \beta m \Psi
+\end{align}
+\begin{align}
+  \mathrm{i}\dot{\Psi}_R =&amp; -\mathrm{i}\partial_x \Psi_R + m\Psi_L \\
+  \mathrm{i}\dot{\Psi}_L =&amp; \mathrm{i}\partial_x \Psi_L + m\Psi_R
+\end{align}
+<p>
+For a particle at rest ( \(k = 0\) )
+</p>
+\begin{align}
+  \mathrm{i} \frac{\partial}{\partial t} \Psi
+   \equiv \mathrm{i} \begin{pmatrix} \dot{\Psi}_R \\\dot{\Psi}_L \end{pmatrix}= \beta m \Psi
+   \equiv m \begin{pmatrix} \Psi_L \\ \Psi_R \end{pmatrix}
+\end{align}
+
+<p>
+\(\Psi_L\) and \(\Psi_R\) are coupled. We can decouple them by \(\Psi_+ = \Psi_L + \Psi_R\) ,
+\(\Psi_- = \Psi_L - \Psi_R\)
+</p>
+\begin{align}
+  \mathrm{i}\dot{\Psi}_+ &amp;= m\Psi_+ \\
+  \mathrm{i}\dot{\Psi}_- &amp;= -m\Psi_-
+\end{align}
+</div>
+
+<div id="outline-container-org16ad08e" class="outline-3">
+<h3 id="org16ad08e">Dirac Equation in 3 Dimensions</h3>
+<div class="outline-text-3" id="text-org16ad08e">
+<p>
+Let
+</p>
+\begin{align}
+  \omega =&amp; \sqrt{k_1^2 + k_2^2 + k_3^2 + m^2} \\
+  \omega =&amp; \alpha k + \beta m = \alpha_1 k_1 + \alpha_2k_2 + \alpha_3 k_3 + \beta m
+\end{align}
+<p>
+so
+</p>
+\begin{align}
+\beta = \begin{pmatrix} I &amp; 0 \\ 0 &amp; -I \end{pmatrix}, \quad
+\alpha_i   = \begin{pmatrix} 0 &amp; \sigma_i \\ \sigma_i &amp; 0 \end{pmatrix}
+\end{align}
+<p>
+where \(I\) is \(2\times 2\) identity matrix, \(\sigma_i\) is Pauli matrix.
+</p>
+\begin{align}
+  \mathrm{i}\frac{\partial }{\partial t} \Psi_p = - i (\alpha_i)_{pq} \frac{\partial}{\partial x^i}\Psi_q
+    + \beta_q m \Psi_q
+\end{align}
+</div>
+</div>
+</div>
+
+<div id="outline-container-org085fdd8" class="outline-2">
+<h2 id="org085fdd8">Lecture 7: Angular Momentum</h2>
+<div class="outline-text-2" id="text-org085fdd8">
+<p>
+Angular momentum
+</p>
+<ul class="org-ul">
+<li>Orbital</li>
+<li>Spin</li>
+</ul>
+
+\begin{align}
+  [x_i , x_j] &amp;= 0 \\
+  [p_i , p_j] &amp;= 0 \\
+  [x, p_x] &amp;= \mathrm{i}\hbar \\
+  [x_i, p_j] &amp;= \mathrm{i}\hbar\delta_{ij} \\
+  [L_x, L_y] &amp;= \mathrm{i}\hbar L_z
+\end{align}
+\begin{align}
+  L_+ &amp;= L_x + \mathrm{i} L_y \\
+  L_- &amp;= L_x - \mathrm{i} L_y \\
+\end{align}
+\begin{align}
+  [L_{+} , L_z] &amp;= - L_{ +} \\
+  [L_{- }, L_z] &amp;= + L_-
+\end{align}
+</div>
+</div>
+
+<div id="outline-container-org35aedba" class="outline-2">
+<h2 id="org35aedba">Lecture 8: Spin</h2>
+<div class="outline-text-2" id="text-org35aedba">
+<p>
+Review spin.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org034ed71" class="outline-2">
+<h2 id="org034ed71">Lecture 9: Interaction</h2>
+<div class="outline-text-2" id="text-org034ed71">
+<p>
+Diagrams but abstract.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd29603f" class="outline-2">
+<h2 id="orgd29603f">Lecture 10: Path Integral</h2>
+<div class="outline-text-2" id="text-orgd29603f">
+<p>
+Abstract.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8787e5f" class="outline-2">
+<h2 id="org8787e5f">Reference</h2>
+</div>
+</div>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Susskind/" rel="tag"># Susskind</a>
+          
+            <a href="/tags/physics/" rel="tag"># physics</a>
+          
+            <a href="/tags/Particle-Physics/" rel="tag"># Particle Physics</a>
+          
+            <a href="/tags/Quantum-Field-Theory/" rel="tag"># Quantum Field Theory</a>
+          
+            <a href="/tags/Stimulated-Emission/" rel="tag"># Stimulated Emission</a>
+          
+            <a href="/tags/Group-Velocity/" rel="tag"># Group Velocity</a>
+          
+            <a href="/tags/Phase-Velocity/" rel="tag"># Phase Velocity</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/03/19/lsp_flycheck/" rel="next" title="记一次折腾上头经历: lsp-pyright vs. flycheck & flake8">
+                <i class="fa fa-chevron-left"></i> 记一次折腾上头经历: lsp-pyright vs. flycheck & flake8
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/04/27/Symmetry_Factor_Scaler_Field/" rel="prev" title="Symmetry Factor of φ-4 Scaler Field">
+                Symmetry Factor of φ-4 Scaler Field <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">ZQW</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/phyer219" target="_blank" title="GitHub">GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:zeqing6688@126.com" target="_blank" title="E-Mail">E-Mail</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#org44d157c"><span class="nav-text">Information</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org278c830"><span class="nav-text">Lecture 1: Particles and Light</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#orgd872a01"><span class="nav-text">Wave Properties</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orgf913a07"><span class="nav-text">Photon Properties</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org534c22e"><span class="nav-text">Lecture 2: Review of Quantum Mechanics &amp; Harmonic Oscillator</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#org0db8e01"><span class="nav-text">Periodic Boundary Condition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orgaf5ca82"><span class="nav-text">Harmonic Oscillator</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orgf8d0328"><span class="nav-text">Lecture 3: Field Operators</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#orgb87cac4"><span class="nav-text">Field operator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org4305ba5"><span class="nav-text">Possible  Reaction &amp; Stimulated Emission</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org0fd67f6"><span class="nav-text">Density of \(x\)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org542b9c2"><span class="nav-text">Lecture 4: Scattering Process</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#org4af86c1"><span class="nav-text">Simplest Quantum Field</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org042d564"><span class="nav-text">A Model: Scattering</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org8d48b20"><span class="nav-text">Lecture 5: Fermion</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#org78c0d2b"><span class="nav-text">Phase Velocity &amp; Group Velocity</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org316e6a4"><span class="nav-text">Fermion</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#orgb17aa50"><span class="nav-text">Ground state</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#org3cc7c5a"><span class="nav-text">Dirac Equation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org4c6cfbc"><span class="nav-text">Lecture 6: Dirac Equation &amp; Higgs Boson</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#org16ad08e"><span class="nav-text">Dirac Equation in 3 Dimensions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org085fdd8"><span class="nav-text">Lecture 7: Angular Momentum</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org35aedba"><span class="nav-text">Lecture 8: Spin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org034ed71"><span class="nav-text">Lecture 9: Interaction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#orgd29603f"><span class="nav-text">Lecture 10: Path Integral</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#org8787e5f"><span class="nav-text">Reference</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2022</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ZQW</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: true,
+        notify: true,
+        appId: 'HxcUg2XNBWPi9lDuoyHrlC1Y-gzGzoHsz',
+        appKey: 'xOIbh9F1fupdsCevG0asqN0W',
+        placeholder: '.',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: false
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -26,8 +26,8 @@ for f in files:
             lines = old_content.readlines()
             print('======')
             for l in lines:
-                l = l.replace("\'/", "\'/hexo_ver/")
-                l = l.replace("\"/", "\"/hexo_ver/")
+                l = l.replace("\'\\", "\'hexo_ver\\")
+                l = l.replace("\"\\", "\"hexo_ver\\")
                 new_content += l
         with open(f, 'w', encoding="utf-8") as old_content:
             old_content.write(new_content)
